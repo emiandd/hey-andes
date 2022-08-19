@@ -1,8 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
-import companiesReducer from './companies/companiesSlice.js';
+import { createStore, applyMiddleware } from "redux";
+import reducer from './companies/reducer.js';
+import thunk from "redux-thunk";
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-export const store = configureStore({
-  reducer: {
-  	companies: companiesReducer
-  },
-})
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
+
+export default store;
