@@ -1,23 +1,17 @@
 import './App.css';
-import { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import { preloadData } from './redux/companies/companiesSlice.js';
+import Companies from './pages/Companies.jsx';
+import CompanyDetail from './pages/CompanyDetail.jsx';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
 
-  const test = useSelector( state => state.companies.allCompanies );
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(preloadData())
-  }, [dispatch])
-
-  console.log(test);
-
   return (
-    <div className="App">
-      <h1>TESTING</h1>
-    </div>
+    <>
+     <Routes>
+       <Route path="/empresas" element={<Companies />} />
+       <Route path="/empresas/:nombre_empresa" element={<CompanyDetail />} />
+     </Routes>
+    </>
   );
 }
 
