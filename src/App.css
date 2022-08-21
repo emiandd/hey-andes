@@ -1,4 +1,16 @@
-body{
+
+/*///  PAGE: Home  ///*/
+
+.home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home button{
+  border: none;
+  font-size: 1.5rem;
 }
 
 /*///  PAGE: Companies  ///*/
@@ -71,7 +83,7 @@ body{
   height: 3rem;
   align-items: center;
   padding-left: 4.7rem;
-  margin-bottom: 2rem;
+  margin: 1rem 0;
 }
 
 .menu p{
