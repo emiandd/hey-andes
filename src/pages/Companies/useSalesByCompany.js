@@ -10,7 +10,6 @@ export const useSalesByCompany = () => {
 		const salesByMonth = [];
 		let monthMoreSales = '';
 
-
 	/*  1. It is creating a new array with the name of the companies
 		2. It is filtering the array to remove duplicates
 		3. It is creating a new array of objects with the name of the company, the total sales, and the comission. */
@@ -21,16 +20,17 @@ export const useSalesByCompany = () => {
 		let salesByCompany = nameCompanies.map( c => {
 			let obj = {
 				nameAgency: c,
-				sales: allSales.filter( s => s.nameAgency === c).reduce( (total, sale) => total + sale.finalPrice, 0),
+				sales: allSales.filter( s => s.nameAgency === c),
 				comision: allSales.filter( s => s.nameAgency === c).reduce( (total, sale) => total + sale.finalPrice, 0) * .025
 			}
-			allTotalSales.push(obj.sales);
+			allTotalSales.push(obj.sales.reduce( (total, sale) => total + sale.finalPrice, 0));
 			return obj;
 		})
 
+
 		allSales.map( c => {
-			let sale = c.datePayment.split('-')[1];
-			salesByMonth.push(Number(sale))
+			let month = c.datePayment.split('-')[1];
+			salesByMonth.push(Number(month))
 		})
 
 		let months = {
@@ -100,7 +100,7 @@ export const useSalesByCompany = () => {
 
 		useEffect(() => {
 			dispatch(getAllSales());
-		}, [])
+		}, [dispatch])
 
-		return [allTotalSales, salesByCompany, monthMoreSales];
+		return { allTotalSales, salesByCompany, monthMoreSales };
 }

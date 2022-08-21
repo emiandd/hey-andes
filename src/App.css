@@ -1,32 +1,30 @@
-/*  PAGE: Companies  */
+body{
+}
+
+/*///  PAGE: Companies  ///*/
 
 .topBar{
-  border: .1rem solid green;
   height: 4rem;
   display: flex;
   align-items: center;
   padding-left: 5rem;
   font-size: 1.5rem;
-  background-color: #212529;
+  background-color: #868686;
 }
 
 .topBar p{
   margin: 0;
   font-weight: bold;
-  color: #0DCAF0;
 }
 
 /*  Company More sales | Month More Sales  */
 
 .main{
-  border: .1rem solid blue;
   height: 100vh;
-  background-color: #E5E5E5;
 }
 
 .company-month{
   display: flex;
-  border: .1rem solid red;
   justify-content: space-around;
   padding: 1rem 0;
   margin-bottom: 2rem;
@@ -38,7 +36,7 @@
   border-radius: 1rem;
   text-align: center;
   width: 35rem;
-  background-color: #212529;
+  background-color: #787878;
 }
 
 .moreSales h2,
@@ -46,7 +44,6 @@
   text-transform: uppercase;
   font-size: 2rem;
   margin: 0;
-  color: #0DCAF0;
 }
 
 .moreSales p,
@@ -54,13 +51,29 @@
   font-size: 2.4rem;
   font-weight: bold;
   margin: 0;
-  color: white;
   text-transform: uppercase;
 }
 
-  /*  Table  */
+/*  Table  */
 
 .table{
   margin: 0 auto;
   width: 91.5% !important;
+}
+
+
+/*///  PAGE: Company Detail  ///*/
+
+.menu{
+  display: flex;
+  gap: 1rem;
+  font-size: 1.4rem;
+  height: 3rem;
+  align-items: center;
+  padding-left: 4.7rem;
+  margin-bottom: 2rem;
+}
+
+.menu p{
+  margin: 0;
 }

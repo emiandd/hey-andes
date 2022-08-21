@@ -1,8 +1,7 @@
 import { GET_ALL_SALES } from './actions.js';
 
 const initialState = {
-	allSales: [],
-	companyDetail: {}
+	allSales: []
 }
 
 export default function reducer( state = initialState, action ){

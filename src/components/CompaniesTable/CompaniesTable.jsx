@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Table, Button } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 
 export default function CompaniesTable({salesByCompany}) {
 
@@ -12,10 +12,9 @@ export default function CompaniesTable({salesByCompany}) {
 	})
 
 	return (
-		<Table striped bordered variant="dark" className="table" size="lg">
+		<Table striped bordered variant="light" className="table" size="lg">
 			<thead>
 				<tr>
-					<th>#</th>
 					<th>Nombre Empresa</th>
 					<th>Total Ventas</th>
 					<th>Comisión</th>
@@ -26,11 +25,10 @@ export default function CompaniesTable({salesByCompany}) {
 				{
 					salesByCompany && salesByCompany.map( (n, index) => 
 						<tr key={index}>
-							<td>{index + 1}</td>
 							<td>{n.nameAgency}</td>
-							<td>${n.sales}</td>
-							<td>${n.comision}</td>
-							<td><Button variant="info">Ver Detalle</Button></td>
+							<td>${n.sales.reduce( (total, sale) => total + sale.finalPrice, 0).toLocaleString()}</td>
+							<td>${n.comision.toLocaleString()}</td>
+							<td><Link to={`/empresas/${n.nameAgency.replaceAll(' ', '-').toLowerCase()}`}><Button variant="info">Ver Detalle</Button></Link></td>
 						</tr>
 					)
 				}

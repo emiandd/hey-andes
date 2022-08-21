@@ -6,7 +6,7 @@ import CompaniesTable from '../../components/CompaniesTable/CompaniesTable.jsx';
 
 export default function Companies() {
 
-	const [allTotalSales, salesByCompany, monthMoreSales] = useSalesByCompany();
+	const { allTotalSales, salesByCompany, monthMoreSales } = useSalesByCompany();
 
 	return (
 		<>
