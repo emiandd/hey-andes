@@ -1,6 +1,9 @@
-import { Table, Button } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 export default function CompanyDetailTable({company}) {
+
+	company?.sales.sort( (a, b) => b.datePayment.split('-')[1] - a.datePayment.split('-')[1] )
+
 	return (
 		<Table striped bordered variant="light" className="table" size="lg">
 			<thead>
