@@ -1,4 +1,4 @@
-export const companies = [
+export const sales = [
   {
     "nameAgency": "Ruhiscos Aventuras Spa",
     "day": "2020-12-22",

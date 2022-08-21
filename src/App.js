@@ -1,10 +1,10 @@
 import './App.css';
-import Companies from './pages/Companies.jsx';
-import CompanyDetail from './pages/CompanyDetail.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Companies from './pages/Companies/Companies.jsx';
+import CompanyDetail from './pages/CompanyDetail/CompanyDetail.jsx';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
-
   return (
     <>
      <Routes>

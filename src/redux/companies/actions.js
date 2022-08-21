@@ -1,16 +1,14 @@
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../../db/db.js';
-export const GET_ALL_COMPANIES = 'GET_ALL_COMPANIES';
+export const GET_ALL_SALES = 'GET_ALL_SALES';
 
-
-
-export const getAllCompanies = () => {
+export const getAllSales = () => {
 	return async function(dispatch){
-		let companies = [];
-		const querySnapshot = await getDocs(collection(db, "companies"));
+		let sales = [];
+		const querySnapshot = await getDocs(collection(db, "sales"));
 		querySnapshot.forEach((doc) => {
-			companies.push(doc.data());
+			sales.push(doc.data());
 		});
-		return dispatch({type: GET_ALL_COMPANIES, payload: companies })
+		return dispatch({type: GET_ALL_SALES, payload: sales })
 	}
 }

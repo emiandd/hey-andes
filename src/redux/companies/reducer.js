@@ -1,7 +1,7 @@
-import { GET_ALL_COMPANIES } from './actions.js';
+import { GET_ALL_SALES } from './actions.js';
 
 const initialState = {
-	allCompanies: [],
+	allSales: [],
 	companyDetail: {}
 }
 
@@ -9,10 +9,10 @@ export default function reducer( state = initialState, action ){
 
 	switch (action.type) {
 
-		case GET_ALL_COMPANIES:
+		case GET_ALL_SALES:
 			return{
 				...state,
-				allCompanies: action.payload
+				allSales: action.payload
 			}
 
 		default:

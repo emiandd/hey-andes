@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
-}
+/*  PAGE: Companies  */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.topBar{
+  border: .1rem solid green;
+  height: 4rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 5rem;
+  font-size: 1.5rem;
+  background-color: #212529;
+}
+
+.topBar p{
+  margin: 0;
+  font-weight: bold;
+  color: #0DCAF0;
+}
+
+/*  Company More sales | Month More Sales  */
+
+.main{
+  border: .1rem solid blue;
+  height: 100vh;
+  background-color: #E5E5E5;
+}
+
+.company-month{
+  display: flex;
+  border: .1rem solid red;
+  justify-content: space-around;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.moreSales,
+.monthMoreSales{
+  padding: 2rem 0;
+  border-radius: 1rem;
+  text-align: center;
+  width: 35rem;
+  background-color: #212529;
+}
+
+.moreSales h2,
+.monthMoreSales h2{
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 0;
+  color: #0DCAF0;
+}
+
+.moreSales p,
+.monthMoreSales p{
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 0;
   color: white;
+  text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
-}
+  /*  Table  */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table{
+  margin: 0 auto;
+  width: 91.5% !important;
 }
