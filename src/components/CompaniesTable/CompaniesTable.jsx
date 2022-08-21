@@ -28,7 +28,7 @@ export default function CompaniesTable({salesByCompany}) {
 							<td>{n.nameAgency}</td>
 							<td>${n.sales.reduce( (total, sale) => total + sale.finalPrice, 0).toLocaleString()}</td>
 							<td>${n.comision.toLocaleString()}</td>
-							<td><Link to={`/empresas/${n.nameAgency.replaceAll(' ', '-').toLowerCase()}`}><Button variant="info">Ver Detalle</Button></Link></td>
+							<td><Link to={`/empresas/${n.nameAgency.replaceAll(' ', '-').toLowerCase()}`}><Button variant="secondary">Ver Detalle</Button></Link></td>
 						</tr>
 					)
 				}
